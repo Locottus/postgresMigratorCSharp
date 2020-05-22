@@ -17,3 +17,4 @@ D:\cargarDatosCSVPostgres\cargarDatosCSVPostgres\obj\Debug\cargarDatosCSVPostgre
 D:\cargarDatosCSVPostgres\cargarDatosCSVPostgres\obj\Debug\cargarDatosCSVPostgres.exe
 D:\cargarDatosCSVPostgres\cargarDatosCSVPostgres\obj\Debug\cargarDatosCSVPostgres.pdb
 D:\cargarDatosCSVPostgres\cargarDatosCSVPostgres\obj\Debug\cargarDatosCSVPostgres.csproj.CoreCompileInputs.cache
+D:\cargarDatosCSVPostgres\cargarDatosCSVPostgres\obj\Debug\cargarDatosCSVPostgres.Form2.resources

@@ -25,7 +25,7 @@ namespace cargarDatosCSVPostgres
                 "id SERIAL PRIMARY KEY,\n";
             for (int i = 0; i < campos.Length; i++)
             {
-                lista = lista + campos[i].Replace("'", "") + " text null ,\n";
+                lista = lista + convUTF8(campos[i].Replace("'", "")) + " text null ,\n";
             }
             lista = lista.Remove(lista.Length - 2);
             return  lista + " );\n ";
@@ -41,10 +41,15 @@ namespace cargarDatosCSVPostgres
             string lista = "";
             for(int i =0; i < campos.Length; i++)
             {
-                lista = lista +   campos[i].Replace("'","") + ",";
+                lista = lista + convUTF8(campos[i].Replace("'","")) + ",";
             }
             lista = lista.Remove(lista.Length - 1);
             return encabezado() + " ( " + lista + " ) ";
+        }
+
+        public string convUTF8(string cadena)
+        {
+            return cadena.Replace("á", "a").Replace("é", "e").Replace("í", "i").Replace("ó", "o").Replace("ú", "u").Replace("ñ", "n").Replace("Á", "A").Replace("É", "E").Replace("Í", "I").Replace("Ó", "O").Replace("Ú", "U").Replace("Ñ", "Ñ");
         }
 
         public string valores(string[] campos)
@@ -52,7 +57,7 @@ namespace cargarDatosCSVPostgres
             string lista = "";
             for (int i = 0; i < campos.Length; i++)
             {
-                lista = lista + campos[i] + ",";
+                lista = lista + convUTF8(campos[i]) + ",";
             }
             lista = lista.Remove(lista.Length - 1);
             return " values ( " + lista + " ); ";
