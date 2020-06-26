@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.txtCreate = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cEspeciales = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -62,7 +64,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(52, 55);
             this.textBox2.TabIndex = 1;
-            this.textBox2.Text = ",";
             // 
             // label2
             // 
@@ -85,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(181, 30);
+            this.label3.Location = new System.Drawing.Point(361, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 17);
             this.label3.TabIndex = 0;
@@ -93,7 +94,7 @@
             // 
             // txtTabla
             // 
-            this.txtTabla.Location = new System.Drawing.Point(185, 55);
+            this.txtTabla.Location = new System.Drawing.Point(365, 55);
             this.txtTabla.Margin = new System.Windows.Forms.Padding(4);
             this.txtTabla.Name = "txtTabla";
             this.txtTabla.Size = new System.Drawing.Size(221, 22);
@@ -128,11 +129,34 @@
             this.txtCreate.TabIndex = 5;
             this.txtCreate.Text = "";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(184, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "caracter especial";
+            // 
+            // cEspeciales
+            // 
+            this.cEspeciales.FormattingEnabled = true;
+            this.cEspeciales.Items.AddRange(new object[] {
+            "",
+            "TABULADOR",
+            "ESPACIO"});
+            this.cEspeciales.Location = new System.Drawing.Point(187, 53);
+            this.cEspeciales.Name = "cEspeciales";
+            this.cEspeciales.Size = new System.Drawing.Size(121, 24);
+            this.cEspeciales.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 638);
+            this.Controls.Add(this.cEspeciales);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCreate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -164,6 +188,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox txtCreate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cEspeciales;
     }
 }
 

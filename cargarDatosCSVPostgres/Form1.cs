@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,6 +15,28 @@ namespace cargarDatosCSVPostgres
             InitializeComponent();
         }
 
+
+        private char CarDelimitador()
+        {
+            char car = ' ';
+
+            if (textBox2.Text is null)
+            {
+                if (cEspeciales.Text.Equals("TABULADOR"))
+                {
+                    car = '\t';
+                }
+                else if (cEspeciales.Text.Equals("ESPACIO"))
+                {
+                    car = ' ';
+                }
+
+            }
+            else
+                car =  textBox2.Text[0];
+            Console.WriteLine("CARACTER DELIMITADOR: " + car);
+            return car;
+        }
 
         public string createScript(string[] campos)
         {
@@ -90,8 +109,8 @@ namespace cargarDatosCSVPostgres
                     var line = reader.ReadLine();
                     if (line.Length > 0)
                     {
-                        
-                        var values = line.Split(Char.Parse(textBox2.Text.ToString()));
+                   
+                        var values = line.Split(CarDelimitador());
                         
                         for(int i = 0; i < values.Length; i++)
                         {
