@@ -20,7 +20,7 @@ namespace cargarDatosCSVPostgres
         {
             char car = ' ';
 
-            if (textBox2.Text is null)
+            if (textBox2.Text.Length == 0)
             {
                 if (cEspeciales.Text.Equals("TABULADOR"))
                 {
@@ -33,7 +33,7 @@ namespace cargarDatosCSVPostgres
 
             }
             else
-                car =  textBox2.Text[0];
+                car =  Char.Parse(textBox2.Text);
             Console.WriteLine("CARACTER DELIMITADOR: " + car);
             return car;
         }
